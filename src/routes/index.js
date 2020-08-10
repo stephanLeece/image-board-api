@@ -1,8 +1,7 @@
-const express = require('express');
-const router = express.Router();
+import express from 'express';
 
-router.get('/', function(req, res, next) {
-  return res.status(200).json({ message: 'Welcome to Express API template' });
-});
+const indexRouter = express.Router();
 
-module.exports = router;
+indexRouter.get('/', (req, res) => res.status(200).json({ message: 'Welcome to Express API template' }));
+
+export default indexRouter;
